@@ -1,0 +1,8 @@
+streamlit==1.37.1
+google-api-python-client==2.141.0
+google-auth==2.33.0
+google-auth-oauthlib==1.2.0
+python-dotenv==1.0.1
+openai==1.40.0
+slack_sdk==3.31.0
+requests==2.32.3
