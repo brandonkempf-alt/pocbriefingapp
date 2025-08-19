@@ -40,20 +40,13 @@ def get_google_creds(client_json_path: str) -> Credentials:
     creds: Optional[Credentials] = None
     token_file = _token_path()
 
-    if os.path.exists(token_file):
-        creds = Credentials.from_authorized_user_file(token_file, SCOPES)
-
-    if not creds or not creds.valid:
-        if creds and creds.expired and creds.refresh_token:
+    token_env = os.getenv("GOOGLE_TOKEN_JSON", "").strip()
+    if token_env:
+        info = json.loads(token_env)
+        creds = Credentials.from_authorized_user_info(info=info, scopes=SCOPES)
+        if not creds.valid and creds.expired and creds.refresh_token:
             creds.refresh(Request())
-        else:
-            flow = InstalledAppFlow.from_client_secrets_file(client_json_path, SCOPES)
-            # Opens a local browser for consent; random localhost port is fine for Desktop apps
-            creds = flow.run_local_server(port=0, prompt="consent")
-        with open(token_file, "w") as f:
-            f.write(creds.to_json())
-
-    return creds
+        return creds
 
 # ---------------------------------------------------------------------
 # Google APIs: Calendar / Drive / Slides
