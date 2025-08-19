@@ -32,13 +32,13 @@ EXCLUSION_MODE = os.getenv("EXCLUSION_MODE", "any").lower().strip()  # any | all
 RESOURCES_JSON = os.getenv("RESOURCES_JSON", "").strip()
 
 DEFAULT_RESOURCES = [
-    {"label": "AWS Connection Guide", "url": "https://help.drata.com/en/articles/5048935-aws-amazon-web-services-connection"},
-    {"label": "Azure Connection Guide", "url": "https://help.drata.com/en/articles/5032404-azure-connection"},
-    {"label": "GCP Connection Guide", "url": "https://help.drata.com/en/articles/4663373-gcp-google-cloud-platform-connection"},
-    {"label": "Intune Connection Guide", "url": "https://help.drata.com/en/articles/5604949-intune-windows-connection"},
-    {"label": "EntraID/O365 Connection Guide", "url": "https://help.drata.com/en/articles/4797766-microsoft-365-connection"},
-    {"label": "Okta Connection Guide", "url": "https://help.drata.com/en/articles/5608136-okta-connection-for-identity-management"},
-    {"label": "Jira Connection Guide", "url": "https://help.drata.com/en/articles/4663378-jira-connection"},
+    {"label": "AWS Connection Guides", "url": "https://help.drata.com/en/articles/5048935-aws-amazon-web-services-connection"},
+    {"label": "Azure Connection Guides", "url": "https://help.drata.com/en/articles/5032404-azure-connection"},
+    {"label": "GCP Connection Guides", "url": "https://help.drata.com/en/articles/4663373-gcp-google-cloud-platform-connection"},
+    {"label": "Intune Connection Guides", "url": "https://help.drata.com/en/articles/5604949-intune-windows-connection"},
+    {"label": "EntraID/O365 Connection Guides", "url": "https://help.drata.com/en/articles/4797766-microsoft-365-connection"},
+    {"label": "Okta Connection Guides", "url": "https://help.drata.com/en/articles/5608136-okta-connection-for-identity-management"},
+    {"label": "Jira Connection Guides", "url": "https://help.drata.com/en/articles/4663378-jira-connection"},
 ]
 
 try:
