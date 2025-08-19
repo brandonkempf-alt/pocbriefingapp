@@ -54,7 +54,7 @@ except Exception:
 # Streamlit config & header
 # ---------------------------
 st.set_page_config(page_title="POC Briefing App", layout="wide")
-st.title("POC Briefing App – by Hack_Street_Boyz")
+st.title("POC Briefing App – by Hack_Street_Boyzzzz")
 
 # Sidebar toggle for Slack auto-send
 if "auto_slack" not in st.session_state:
